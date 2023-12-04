@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <section class="main-section timer-section active">
+        <div class="container">
+            <div class="section-wrapper">
+                <div class="timer-title">
+                    <h1>Countdown Timer</h1>
+                    <p> 
+                        <span><input type="number" name="hours" id="hours" onchange="validateTime('hours', 999)" value="0"></span> Hours
+                        <span><input type="number" name="minutes" id="minutes" onchange="validateTime('minutes', 60)" value="0"></span> Minutes
+                        <span><input type="number" name="seconds" id="seconds" onchange="validateTime('seconds', 60)" value="0"></span> Seconds
+                    </p>
+                    <p id="error-message"></p>
+                </div>
+                <div class="timer-container">
+                    <div id="timer">
+                        00:00:00
+                    </div>
+                    <div class="bar">
+                        <div id="indicator-bar"></div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <a href="#" class="button" id="start-btn" onclick="startTimer()">Start</a>
+                    <a href="#" class="button" id="pause-btn" onclick="pauseTimer()">Stop</a>
+                    <a href="#" class="button" id="reset-btn" onclick="resetTimer()">Reset</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
